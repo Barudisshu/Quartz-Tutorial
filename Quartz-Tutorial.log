@@ -1,0 +1,701 @@
+[INFO][2014-07-23 17:23:19,283][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:23:19,289][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:23:19,317][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:23:19,319][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:23:19,321][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Registering Quartz Job Initialization Plug-in.
+[INFO][2014-07-23 17:23:19,324][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:23:19,325][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:23:19,327][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from the specified file : 'scan-quartz.properties' from the class resource path.
+[INFO][2014-07-23 17:23:19,329][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[DEBUG][2014-07-23 17:23:19,343][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Scheduled file scan job for data file: multijobs.xml, at interval: 10000
+[DEBUG][2014-07-23 17:23:19,370][org.quartz.xml.XMLSchedulingDataProcessor]Utilizing schema packaged in local quartz distribution jar.
+[INFO][2014-07-23 17:23:19,376][org.quartz.xml.XMLSchedulingDataProcessor]Parsing XML file: multijobs.xml with systemId: multijobs.xml
+[DEBUG][2014-07-23 17:23:19,507][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job group commands.
+[DEBUG][2014-07-23 17:23:19,519][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger group commands.
+[DEBUG][2014-07-23 17:23:19,523][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job commands.
+[DEBUG][2014-07-23 17:23:19,525][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger commands.
+[DEBUG][2014-07-23 17:23:19,529][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'overwrite-existing-data' not specified, defaulting to true
+[DEBUG][2014-07-23 17:23:19,531][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'ignore-duplicates' not specified, defaulting to false
+[DEBUG][2014-07-23 17:23:19,534][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 job definitions.
+[DEBUG][2014-07-23 17:23:19,563][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanTomcat':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:23:19,581][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanGlassfish':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:23:19,584][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 trigger definitions.
+[DEBUG][2014-07-23 17:23:19,605][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.tomcatTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[DEBUG][2014-07-23 17:23:19,628][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.glassfishTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[INFO][2014-07-23 17:23:19,628][org.quartz.xml.XMLSchedulingDataProcessor]Adding 2 jobs, 2 triggers.
+[INFO][2014-07-23 17:23:19,629][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanTomcat
+[DEBUG][2014-07-23 17:23:19,629][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanTomcat with trigger: trigger-group.tomcatTrigger
+[INFO][2014-07-23 17:23:19,630][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:23:19,631][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanGlassfish with trigger: trigger-group.glassfishTrigger
+[INFO][2014-07-23 17:23:19,632][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 17:23:19,635][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:23:19 CST 2014
+[DEBUG][2014-07-23 17:23:19,637][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:19,643][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:23:19,651][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:19,652][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:23:19,653][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:23:19,654][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:20,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:23:20,003][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:20,003][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:23:20,003][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:23:20 CST 2014
+[DEBUG][2014-07-23 17:23:20,003][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:23:20,005][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:20,005][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:23:20,006][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:23:20 CST 2014
+[INFO][2014-07-23 17:23:20,006][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:23:20,006][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:23:20,007][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:23:20,008][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:23:20,009][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:23:20,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:23:20,011][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[INFO][2014-07-23 17:23:20,007][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:23:20,012][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:23:20,013][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:23:20,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:23:20,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:23:20,319][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:23:21,692][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[DEBUG][2014-07-23 17:23:29,336][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:23:29,338][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:29,339][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:23:29,341][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:23:29,342][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:30,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:23:30,002][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:23:30,003][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:23:30 CST 2014
+[DEBUG][2014-07-23 17:23:30,004][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:30,005][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[INFO][2014-07-23 17:23:30,007][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:23:30,008][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[DEBUG][2014-07-23 17:23:30,008][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:23:30,009][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:23:30 CST 2014
+[INFO][2014-07-23 17:23:30,009][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[DEBUG][2014-07-23 17:23:30,009][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:23:30,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:23:30,011][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:23:30,012][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:23:30,013][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[INFO][2014-07-23 17:23:30,010][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:23:30,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:23:30,015][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:23:30,015][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:23:30,016][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:23:39,337][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:23:39,339][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:23:39,339][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:23:39,341][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:23:39,342][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:23:39,636][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:23:39,637][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:23:39,637][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:23:39,638][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:23:39,638][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:24:17,271][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:24:17,276][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:24:17,302][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:24:17,304][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:24:17,306][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:24:17,308][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:24:17,310][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[INFO][2014-07-23 17:24:17,311][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[INFO][2014-07-23 17:24:17,324][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 17:24:17,327][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:24:17 CST 2014
+[DEBUG][2014-07-23 17:24:17,327][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:24:17,332][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:24:17,340][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:24:17,340][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[DEBUG][2014-07-23 17:24:17,341][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[INFO][2014-07-23 17:24:17,341][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:24:17 CST 2014
+[DEBUG][2014-07-23 17:24:17,342][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:24:17,343][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:24:17 CST 2014
+[INFO][2014-07-23 17:24:17,344][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:24:17,344][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:24:17,345][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:24:17,345][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[DEBUG][2014-07-23 17:24:17,342][org.quartz.core.QuartzSchedulerThread]batch acquisition of 0 triggers
+[INFO][2014-07-23 17:24:17,347][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[INFO][2014-07-23 17:24:17,347][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:24:17,348][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:24:17,349][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:24:17,349][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:24:17,350][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:24:17,351][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:24:17,352][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[DEBUG][2014-07-23 17:24:18,304][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:24:22,731][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[INFO][2014-07-23 17:24:27,328][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:24:27,329][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:24:27,331][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:24:27,331][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:24:27,333][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:24:36,060][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:24:36,073][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:24:36,099][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:24:36,101][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:24:36,103][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:24:36,104][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:24:36,107][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[INFO][2014-07-23 17:24:36,108][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[INFO][2014-07-23 17:24:36,109][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[DEBUG][2014-07-23 17:24:36,109][org.quartz.core.QuartzSchedulerThread]batch acquisition of 0 triggers
+[INFO][2014-07-23 17:24:36,111][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:24:36 CST 2014
+[DEBUG][2014-07-23 17:24:36,126][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:24:36,131][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanDirectory', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:24:36,139][org.quartz.core.QuartzSchedulerThread]batch acquisition of 0 triggers
+[DEBUG][2014-07-23 17:24:36,139][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanDirectory
+[INFO][2014-07-23 17:24:36,140][net.individuals.quartz.ScanDirectoryJob]ScanDirectory fired at Wed Jul 23 17:24:36 CST 2014
+[INFO][2014-07-23 17:24:36,142][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:24:36,143][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:24:36,143][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:24:36,144][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:24:36,144][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:24:37,101][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:24:38,825][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[INFO][2014-07-23 17:24:46,126][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:24:46,127][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:24:46,128][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:24:46,129][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:24:46,130][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:25:26,477][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:25:26,484][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:25:26,512][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:25:26,514][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:25:26,516][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Registering Quartz Job Initialization Plug-in.
+[INFO][2014-07-23 17:25:26,519][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:25:26,520][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:25:26,522][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from the specified file : 'scan-quartz.properties' from the class resource path.
+[INFO][2014-07-23 17:25:26,523][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[DEBUG][2014-07-23 17:25:26,536][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Scheduled file scan job for data file: multijobs.xml, at interval: 10000
+[DEBUG][2014-07-23 17:25:26,564][org.quartz.xml.XMLSchedulingDataProcessor]Utilizing schema packaged in local quartz distribution jar.
+[INFO][2014-07-23 17:25:26,571][org.quartz.xml.XMLSchedulingDataProcessor]Parsing XML file: multijobs.xml with systemId: multijobs.xml
+[DEBUG][2014-07-23 17:25:26,696][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job group commands.
+[DEBUG][2014-07-23 17:25:26,709][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger group commands.
+[DEBUG][2014-07-23 17:25:26,712][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job commands.
+[DEBUG][2014-07-23 17:25:26,715][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger commands.
+[DEBUG][2014-07-23 17:25:26,718][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'overwrite-existing-data' not specified, defaulting to true
+[DEBUG][2014-07-23 17:25:26,721][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'ignore-duplicates' not specified, defaulting to false
+[DEBUG][2014-07-23 17:25:26,724][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 job definitions.
+[DEBUG][2014-07-23 17:25:26,750][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanTomcat':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:25:26,768][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanGlassfish':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:25:26,771][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 trigger definitions.
+[DEBUG][2014-07-23 17:25:26,792][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.tomcatTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[DEBUG][2014-07-23 17:25:26,813][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.glassfishTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[INFO][2014-07-23 17:25:26,814][org.quartz.xml.XMLSchedulingDataProcessor]Adding 2 jobs, 2 triggers.
+[INFO][2014-07-23 17:25:26,815][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanTomcat
+[DEBUG][2014-07-23 17:25:26,815][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanTomcat with trigger: trigger-group.tomcatTrigger
+[INFO][2014-07-23 17:25:26,816][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:25:26,816][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanGlassfish with trigger: trigger-group.glassfishTrigger
+[INFO][2014-07-23 17:25:26,817][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 17:25:26,819][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:25:26 CST 2014
+[DEBUG][2014-07-23 17:25:26,824][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:26,829][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:25:26,838][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:26,842][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:25:26,844][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:25:26,844][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:27,514][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[DEBUG][2014-07-23 17:25:30,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:25:30,005][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:25:30,005][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:25:30,006][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:25:30 CST 2014
+[DEBUG][2014-07-23 17:25:30,006][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:25:30,009][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:30,010][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:25:30,011][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:25:30 CST 2014
+[INFO][2014-07-23 17:25:30,012][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:25:30,013][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:25:30,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:25:30,016][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:25:30,017][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:25:30,019][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:25:30,020][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:25:30,022][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:25:30,023][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:25:30,024][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[INFO][2014-07-23 17:25:30,020][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:25:30,028][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[INFO][2014-07-23 17:25:31,345][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[DEBUG][2014-07-23 17:25:36,530][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:25:36,532][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:25:36,533][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:25:36,535][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:40,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:25:40,001][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:40,001][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:25:40,001][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[INFO][2014-07-23 17:25:40,001][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:25:40 CST 2014
+[DEBUG][2014-07-23 17:25:40,002][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:25:40,003][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:25:40,004][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:25:40,004][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:25:40,005][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:25:40,005][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:25:40,006][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:25:40,006][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[DEBUG][2014-07-23 17:25:40,002][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:25:40,007][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:25:40 CST 2014
+[INFO][2014-07-23 17:25:40,010][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:25:40,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:25:40,011][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:25:40,011][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:25:40,012][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:25:46,529][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:25:46,531][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:25:46,531][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:25:46,533][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:25:46,534][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:25:46,819][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:25:46,820][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:25:46,820][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:25:46,821][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:25:46,822][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:34:54,286][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:34:54,291][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:34:54,317][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:34:54,319][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:34:54,321][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:34:54,323][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:34:54,325][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[INFO][2014-07-23 17:34:54,326][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[INFO][2014-07-23 17:34:54,339][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 17:34:54,342][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:34:54 CST 2014
+[DEBUG][2014-07-23 17:34:54,342][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:34:54,347][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:34:54,355][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:34:54,356][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:34:54,356][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[DEBUG][2014-07-23 17:34:54,357][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:34:54,358][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:34:54 CST 2014
+[DEBUG][2014-07-23 17:34:54,356][org.quartz.core.QuartzSchedulerThread]batch acquisition of 0 triggers
+[INFO][2014-07-23 17:34:54,357][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:34:54 CST 2014
+[INFO][2014-07-23 17:34:54,360][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:34:54,360][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:34:54,361][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:34:54,361][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:34:54,362][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:34:54,361][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:34:54,362][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:34:54,363][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:34:54,364][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:34:54,363][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[INFO][2014-07-23 17:34:54,365][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:34:54,366][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[DEBUG][2014-07-23 17:34:55,320][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:34:56,467][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[INFO][2014-07-23 17:35:04,343][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:35:04,344][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:35:04,345][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:35:04,346][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:35:04,347][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:38:17,344][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:38:17,351][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:38:17,382][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:38:17,384][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:38:17,386][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Registering Quartz Job Initialization Plug-in.
+[INFO][2014-07-23 17:38:17,388][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:38:17,390][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:38:17,392][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from the specified file : 'scan-quartz.properties' from the class resource path.
+[INFO][2014-07-23 17:38:17,393][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[DEBUG][2014-07-23 17:38:17,406][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Scheduled file scan job for data file: multijobs.xml, at interval: 10000
+[DEBUG][2014-07-23 17:38:17,433][org.quartz.xml.XMLSchedulingDataProcessor]Utilizing schema packaged in local quartz distribution jar.
+[INFO][2014-07-23 17:38:17,439][org.quartz.xml.XMLSchedulingDataProcessor]Parsing XML file: multijobs.xml with systemId: multijobs.xml
+[DEBUG][2014-07-23 17:38:17,592][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job group commands.
+[DEBUG][2014-07-23 17:38:17,595][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger group commands.
+[DEBUG][2014-07-23 17:38:17,598][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job commands.
+[DEBUG][2014-07-23 17:38:17,600][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger commands.
+[DEBUG][2014-07-23 17:38:17,603][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'overwrite-existing-data' not specified, defaulting to true
+[DEBUG][2014-07-23 17:38:17,606][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'ignore-duplicates' not specified, defaulting to false
+[DEBUG][2014-07-23 17:38:17,609][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 job definitions.
+[DEBUG][2014-07-23 17:38:17,635][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanTomcat':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:38:17,655][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanGlassfish':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:38:17,658][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 trigger definitions.
+[DEBUG][2014-07-23 17:38:17,696][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.tomcatTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[DEBUG][2014-07-23 17:38:17,716][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.glassfishTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[INFO][2014-07-23 17:38:17,717][org.quartz.xml.XMLSchedulingDataProcessor]Adding 2 jobs, 2 triggers.
+[INFO][2014-07-23 17:38:17,718][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanTomcat
+[DEBUG][2014-07-23 17:38:17,718][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanTomcat with trigger: trigger-group.tomcatTrigger
+[INFO][2014-07-23 17:38:17,719][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:38:17,719][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanGlassfish with trigger: trigger-group.glassfishTrigger
+[INFO][2014-07-23 17:38:17,720][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[DEBUG][2014-07-23 17:38:17,724][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:38:17,724][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:38:17 CST 2014
+[DEBUG][2014-07-23 17:38:17,729][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:38:17,742][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:17,742][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:38:17,743][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:38:17,744][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:18,384][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:38:19,413][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[DEBUG][2014-07-23 17:38:20,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:38:20,005][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:38:20,005][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:38:20,006][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:38:20 CST 2014
+[DEBUG][2014-07-23 17:38:20,006][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:38:20,008][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:20,011][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:38:20,011][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:38:20 CST 2014
+[INFO][2014-07-23 17:38:20,012][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:38:20,014][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:38:20,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:38:20,016][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:38:20,017][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:38:20,019][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:38:20,019][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:38:20,021][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[INFO][2014-07-23 17:38:20,015][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:38:20,022][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:38:20,023][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:38:20,024][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:38:27,401][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:38:27,403][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:27,404][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:38:27,406][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:38:27,410][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:30,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:38:30,001][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:30,002][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:38:30,004][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:30,004][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:38:30,005][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:38:30 CST 2014
+[INFO][2014-07-23 17:38:30,009][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:38:30,009][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:38:30,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:38:30,011][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[INFO][2014-07-23 17:38:30,012][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[DEBUG][2014-07-23 17:38:30,010][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:38:30,013][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:38:30 CST 2014
+[INFO][2014-07-23 17:38:30,013][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:38:30,014][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:38:30,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[INFO][2014-07-23 17:38:30,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:38:30,016][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:38:30,017][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:38:30,017][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:38:37,399][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:38:37,401][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:38:37,401][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:38:37,403][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:38:37,404][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:38:37,730][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:38:37,730][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:38:37,731][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:38:37,731][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:38:37,732][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:50:36,833][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:50:36,838][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:50:36,863][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:50:36,865][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:50:36,868][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Registering Quartz Job Initialization Plug-in.
+[INFO][2014-07-23 17:50:36,870][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:50:36,872][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:50:36,874][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from the specified file : 'scan-quartz.properties' from the class resource path.
+[INFO][2014-07-23 17:50:36,875][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[DEBUG][2014-07-23 17:50:36,888][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Scheduled file scan job for data file: multijobs.xml, at interval: 10000
+[DEBUG][2014-07-23 17:50:36,914][org.quartz.xml.XMLSchedulingDataProcessor]Utilizing schema packaged in local quartz distribution jar.
+[INFO][2014-07-23 17:50:36,921][org.quartz.xml.XMLSchedulingDataProcessor]Parsing XML file: multijobs.xml with systemId: multijobs.xml
+[DEBUG][2014-07-23 17:50:37,049][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job group commands.
+[DEBUG][2014-07-23 17:50:37,061][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger group commands.
+[DEBUG][2014-07-23 17:50:37,064][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job commands.
+[DEBUG][2014-07-23 17:50:37,068][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger commands.
+[DEBUG][2014-07-23 17:50:37,071][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'overwrite-existing-data' not specified, defaulting to true
+[DEBUG][2014-07-23 17:50:37,074][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'ignore-duplicates' not specified, defaulting to false
+[DEBUG][2014-07-23 17:50:37,081][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 job definitions.
+[DEBUG][2014-07-23 17:50:37,106][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanTomcat':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:50:37,123][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.ScanGlassfish':  jobClass: 'net.individuals.quartz.ScanDirectoryJob concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 17:50:37,126][org.quartz.xml.XMLSchedulingDataProcessor]Found 2 trigger definitions.
+[DEBUG][2014-07-23 17:50:37,149][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.tomcatTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[DEBUG][2014-07-23 17:50:37,181][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.glassfishTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[INFO][2014-07-23 17:50:37,182][org.quartz.xml.XMLSchedulingDataProcessor]Adding 2 jobs, 2 triggers.
+[INFO][2014-07-23 17:50:37,183][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanTomcat
+[DEBUG][2014-07-23 17:50:37,184][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanTomcat with trigger: trigger-group.tomcatTrigger
+[INFO][2014-07-23 17:50:37,184][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.ScanGlassfish
+[DEBUG][2014-07-23 17:50:37,185][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.ScanGlassfish with trigger: trigger-group.glassfishTrigger
+[DEBUG][2014-07-23 17:50:37,190][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:50:37,197][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 17:50:37,199][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:50:37 CST 2014
+[DEBUG][2014-07-23 17:50:37,201][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:50:37,209][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:50:37,210][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:50:37,211][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:50:37,212][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:50:37,865][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:50:39,342][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[DEBUG][2014-07-23 17:50:40,001][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:50:40,005][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:50:40,005][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:50:40 CST 2014
+[INFO][2014-07-23 17:50:40,009][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:50:40,009][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:50:40,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:50:40,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[DEBUG][2014-07-23 17:50:40,011][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:50:40,012][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[INFO][2014-07-23 17:50:40,013][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[INFO][2014-07-23 17:50:40,014][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[DEBUG][2014-07-23 17:50:40,012][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:50:40,015][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:50:40,015][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:50:40,016][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:50:40 CST 2014
+[INFO][2014-07-23 17:50:40,016][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:50:40,017][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:50:40,017][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:50:40,018][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:50:40,018][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:50:46,882][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:50:46,883][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:50:46,883][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:50:46,884][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:50:46,885][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:50:50,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanGlassfish', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:50:50,002][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanGlassfish
+[INFO][2014-07-23 17:50:50,002][net.individuals.quartz.ScanDirectoryJob]ScanGlassfish fired at Wed Jul 23 17:50:50 CST 2014
+[INFO][2014-07-23 17:50:50,006][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 6
+[INFO][2014-07-23 17:50:50,007][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\default-web.xml - Size: 50334
+[INFO][2014-07-23 17:50:50,008][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml - Size: 29745
+[INFO][2014-07-23 17:50:50,010][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\domain.xml.bak - Size: 33041
+[DEBUG][2014-07-23 17:50:50,008][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:50:50,011][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\glassfish-acc.xml - Size: 3826
+[DEBUG][2014-07-23 17:50:50,012][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanTomcat', class=net.individuals.quartz.ScanDirectoryJob
+[INFO][2014-07-23 17:50:50,013][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-1.0.xml - Size: 7401
+[DEBUG][2014-07-23 17:50:50,015][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanTomcat
+[INFO][2014-07-23 17:50:50,017][net.individuals.quartz.ScanDirectoryJob]ScanTomcat fired at Wed Jul 23 17:50:50 CST 2014
+[DEBUG][2014-07-23 17:50:50,015][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:50:50,016][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config\wss-server-config-2.0.xml - Size: 7907
+[INFO][2014-07-23 17:50:50,019][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:50:50,020][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:50:50,021][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:50:50,022][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:50:50,022][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:50:56,883][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 17:50:56,885][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_multijobs_xml
+[DEBUG][2014-07-23 17:50:56,885][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:50:56,886][org.quartz.jobs.FileScanJob]File 'multijobs.xml' unchanged.
+[DEBUG][2014-07-23 17:50:56,888][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 17:50:57,200][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:50:57,201][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:50:57,203][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:50:57,204][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:50:57,205][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 17:51:08,728][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 17:51:08,741][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 17:51:08,766][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 17:51:08,769][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 17:51:08,771][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 17:51:08,772][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 17:51:08,774][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[INFO][2014-07-23 17:51:08,775][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[INFO][2014-07-23 17:51:08,775][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[DEBUG][2014-07-23 17:51:08,777][org.quartz.core.QuartzSchedulerThread]batch acquisition of 0 triggers
+[INFO][2014-07-23 17:51:08,777][net.individuals.test.SimpleSchedulerTests]Scheduler started at Wed Jul 23 17:51:08 CST 2014
+[DEBUG][2014-07-23 17:51:08,792][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 17:51:08,797][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.ScanDirectory', class=net.individuals.quartz.ScanDirectoryJob
+[DEBUG][2014-07-23 17:51:08,805][org.quartz.core.QuartzSchedulerThread]batch acquisition of 0 triggers
+[DEBUG][2014-07-23 17:51:08,805][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.ScanDirectory
+[INFO][2014-07-23 17:51:08,807][net.individuals.quartz.ScanDirectoryJob]ScanDirectory fired at Wed Jul 23 17:51:08 CST 2014
+[INFO][2014-07-23 17:51:08,808][net.individuals.quartz.ScanDirectoryJob]The number of XML files: 4
+[INFO][2014-07-23 17:51:08,809][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\context.xml - Size: 1428
+[INFO][2014-07-23 17:51:08,809][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\server.xml - Size: 6577
+[INFO][2014-07-23 17:51:08,810][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\tomcat-users.xml - Size: 1566
+[INFO][2014-07-23 17:51:08,810][net.individuals.quartz.ScanDirectoryJob]D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf\web.xml - Size: 167512
+[DEBUG][2014-07-23 17:51:09,769][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 17:51:10,957][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[INFO][2014-07-23 17:51:18,792][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 17:51:18,793][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 17:51:18,794][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 17:51:18,795][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 17:51:18,795][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 18:10:34,262][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 18:10:34,267][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 18:10:34,292][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 18:10:34,294][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 18:10:34,296][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Registering Quartz Job Initialization Plug-in.
+[INFO][2014-07-23 18:10:34,298][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 18:10:34,300][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 18:10:34,302][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from the specified file : 'web-quartz.properties' from the class resource path.
+[INFO][2014-07-23 18:10:34,303][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[DEBUG][2014-07-23 18:10:34,316][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Scheduled file scan job for data file: jobs.xml, at interval: 10000
+[DEBUG][2014-07-23 18:10:34,344][org.quartz.xml.XMLSchedulingDataProcessor]Utilizing schema packaged in local quartz distribution jar.
+[INFO][2014-07-23 18:10:34,349][org.quartz.xml.XMLSchedulingDataProcessor]Parsing XML file: jobs.xml with systemId: jobs.xml
+[DEBUG][2014-07-23 18:10:34,492][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job group commands.
+[DEBUG][2014-07-23 18:10:34,506][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger group commands.
+[DEBUG][2014-07-23 18:10:34,508][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job commands.
+[DEBUG][2014-07-23 18:10:34,512][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger commands.
+[DEBUG][2014-07-23 18:10:34,515][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'overwrite-existing-data' not specified, defaulting to true
+[DEBUG][2014-07-23 18:10:34,517][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'ignore-duplicates' not specified, defaulting to false
+[DEBUG][2014-07-23 18:10:34,521][org.quartz.xml.XMLSchedulingDataProcessor]Found 1 job definitions.
+[DEBUG][2014-07-23 18:10:34,554][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.HelloWorld':  jobClass: 'net.individuals.quartz.HelloWorld concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 18:10:34,557][org.quartz.xml.XMLSchedulingDataProcessor]Found 1 trigger definitions.
+[DEBUG][2014-07-23 18:10:34,589][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.helloTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[INFO][2014-07-23 18:10:34,591][org.quartz.xml.XMLSchedulingDataProcessor]Adding 1 jobs, 1 triggers.
+[INFO][2014-07-23 18:10:34,591][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.HelloWorld
+[DEBUG][2014-07-23 18:10:34,591][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.HelloWorld with trigger: trigger-group.helloTrigger
+[INFO][2014-07-23 18:10:34,592][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 18:10:34,594][net.individuals.test.LoadXmlTests]Scheduler started at Wed Jul 23 18:10:34 CST 2014
+[DEBUG][2014-07-23 18:10:34,599][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:34,605][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 18:10:34,613][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:34,613][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml
+[DEBUG][2014-07-23 18:10:34,614][org.quartz.jobs.FileScanJob]File 'jobs.xml' unchanged.
+[DEBUG][2014-07-23 18:10:34,616][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:35,294][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[INFO][2014-07-23 18:10:36,418][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[DEBUG][2014-07-23 18:10:40,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.HelloWorld', class=net.individuals.quartz.HelloWorld
+[DEBUG][2014-07-23 18:10:40,004][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.HelloWorld
+[INFO][2014-07-23 18:10:40,005][net.individuals.quartz.HelloWorld]Hello World! Wed Jul 23 18:10:40 CST 2014
+[DEBUG][2014-07-23 18:10:40,007][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:44,310][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 18:10:44,312][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml
+[DEBUG][2014-07-23 18:10:44,314][org.quartz.jobs.FileScanJob]File 'jobs.xml' unchanged.
+[DEBUG][2014-07-23 18:10:44,315][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:44,316][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:50,001][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.HelloWorld', class=net.individuals.quartz.HelloWorld
+[DEBUG][2014-07-23 18:10:50,002][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:50,003][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.HelloWorld
+[INFO][2014-07-23 18:10:50,004][net.individuals.quartz.HelloWorld]Hello World! Wed Jul 23 18:10:50 CST 2014
+[DEBUG][2014-07-23 18:10:54,310][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 18:10:54,312][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:10:54,312][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml
+[DEBUG][2014-07-23 18:10:54,314][org.quartz.jobs.FileScanJob]File 'jobs.xml' unchanged.
+[DEBUG][2014-07-23 18:10:54,315][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 18:10:54,596][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 18:10:54,597][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 18:10:54,598][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 18:10:54,599][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 18:10:54,600][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+[INFO][2014-07-23 18:11:57,699][org.quartz.impl.StdSchedulerFactory]Using default implementation for ThreadExecutor
+[INFO][2014-07-23 18:11:57,705][org.quartz.simpl.SimpleThreadPool]Job execution threads will use class loader of thread: main
+[INFO][2014-07-23 18:11:57,730][org.quartz.core.SchedulerSignalerImpl]Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[INFO][2014-07-23 18:11:57,733][org.quartz.core.QuartzScheduler]Quartz Scheduler v.2.1.1 created.
+[INFO][2014-07-23 18:11:57,735][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Registering Quartz Job Initialization Plug-in.
+[INFO][2014-07-23 18:11:57,737][org.quartz.simpl.RAMJobStore]RAMJobStore initialized.
+[INFO][2014-07-23 18:11:57,739][org.quartz.core.QuartzScheduler]Scheduler meta-data: Quartz Scheduler (v2.1.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[INFO][2014-07-23 18:11:57,741][org.quartz.impl.StdSchedulerFactory]Quartz scheduler 'DefaultQuartzScheduler' initialized from the specified file : 'web-quartz.properties' from the class resource path.
+[INFO][2014-07-23 18:11:57,742][org.quartz.impl.StdSchedulerFactory]Quartz scheduler version: 2.1.1
+[DEBUG][2014-07-23 18:11:57,760][org.quartz.plugins.xml.XMLSchedulingDataProcessorPlugin]Scheduled file scan job for data file: jobs.xml, at interval: 10000
+[DEBUG][2014-07-23 18:11:57,789][org.quartz.xml.XMLSchedulingDataProcessor]Utilizing schema packaged in local quartz distribution jar.
+[INFO][2014-07-23 18:11:57,795][org.quartz.xml.XMLSchedulingDataProcessor]Parsing XML file: jobs.xml with systemId: jobs.xml
+[DEBUG][2014-07-23 18:11:57,918][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job group commands.
+[DEBUG][2014-07-23 18:11:57,929][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger group commands.
+[DEBUG][2014-07-23 18:11:57,932][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete job commands.
+[DEBUG][2014-07-23 18:11:57,935][org.quartz.xml.XMLSchedulingDataProcessor]Found 0 delete trigger commands.
+[DEBUG][2014-07-23 18:11:57,937][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'overwrite-existing-data' not specified, defaulting to true
+[DEBUG][2014-07-23 18:11:57,940][org.quartz.xml.XMLSchedulingDataProcessor]Directive 'ignore-duplicates' not specified, defaulting to false
+[DEBUG][2014-07-23 18:11:57,942][org.quartz.xml.XMLSchedulingDataProcessor]Found 1 job definitions.
+[DEBUG][2014-07-23 18:11:57,967][org.quartz.xml.XMLSchedulingDataProcessor]Parsed job definition: JobDetail 'jobDetail-group.HelloWorld':  jobClass: 'net.individuals.quartz.HelloWorld concurrentExectionDisallowed: false persistJobDataAfterExecution: false isDurable: false requestsRecovers: false
+[DEBUG][2014-07-23 18:11:57,971][org.quartz.xml.XMLSchedulingDataProcessor]Found 1 trigger definitions.
+[DEBUG][2014-07-23 18:11:57,996][org.quartz.xml.XMLSchedulingDataProcessor]Parsed trigger definition: Trigger 'trigger-group.helloTrigger':  triggerClass: 'org.quartz.impl.triggers.SimpleTriggerImpl calendar: 'null' misfireInstruction: 0 nextFireTime: null
+[INFO][2014-07-23 18:11:57,997][org.quartz.xml.XMLSchedulingDataProcessor]Adding 1 jobs, 1 triggers.
+[INFO][2014-07-23 18:11:57,998][org.quartz.xml.XMLSchedulingDataProcessor]Adding job: jobDetail-group.HelloWorld
+[DEBUG][2014-07-23 18:11:57,998][org.quartz.xml.XMLSchedulingDataProcessor]Scheduling job: jobDetail-group.HelloWorld with trigger: trigger-group.helloTrigger
+[INFO][2014-07-23 18:11:57,999][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[INFO][2014-07-23 18:11:58,001][net.individuals.test.LoadXmlTests]Scheduler started at Wed Jul 23 18:11:57 CST 2014
+[DEBUG][2014-07-23 18:11:58,005][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:11:58,011][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 18:11:58,018][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:11:58,019][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml
+[DEBUG][2014-07-23 18:11:58,020][org.quartz.jobs.FileScanJob]File 'jobs.xml' unchanged.
+[DEBUG][2014-07-23 18:11:58,020][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:11:58,733][org.quartz.utils.UpdateChecker]Checking for available updated version of Quartz...
+[DEBUG][2014-07-23 18:12:00,000][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.HelloWorld', class=net.individuals.quartz.HelloWorld
+[DEBUG][2014-07-23 18:12:00,002][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.HelloWorld
+[INFO][2014-07-23 18:12:00,002][net.individuals.quartz.HelloWorld]---------------------------------
+
+Hello World! 
+
+---------------------------------Wed Jul 23 18:12:00 CST 2014
+[DEBUG][2014-07-23 18:12:00,003][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 18:12:00,290][org.quartz.utils.UpdateChecker]New Quartz update(s) found: 2.1.7 [http://www.terracotta.org/kit/reflector?kitID=default&pageID=QuartzChangeLog]
+[DEBUG][2014-07-23 18:12:07,754][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 18:12:07,756][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:12:07,756][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml
+[DEBUG][2014-07-23 18:12:07,759][org.quartz.jobs.FileScanJob]File 'jobs.xml' unchanged.
+[DEBUG][2014-07-23 18:12:07,760][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:12:10,014][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'jobDetail-group.HelloWorld', class=net.individuals.quartz.HelloWorld
+[DEBUG][2014-07-23 18:12:10,015][org.quartz.core.JobRunShell]Calling execute on job jobDetail-group.HelloWorld
+[INFO][2014-07-23 18:12:10,015][net.individuals.quartz.HelloWorld]---------------------------------
+
+Hello World! 
+
+---------------------------------Wed Jul 23 18:12:10 CST 2014
+[DEBUG][2014-07-23 18:12:10,016][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:12:17,755][org.quartz.simpl.PropertySettingJobFactory]Producing instance of Job 'JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml', class=org.quartz.jobs.FileScanJob
+[DEBUG][2014-07-23 18:12:17,757][org.quartz.core.JobRunShell]Calling execute on job JobSchedulingDataLoaderPlugin.JobSchedulingDataLoaderPlugin_jobInitializer_jobs_xml
+[DEBUG][2014-07-23 18:12:17,758][org.quartz.jobs.FileScanJob]File 'jobs.xml' unchanged.
+[DEBUG][2014-07-23 18:12:17,757][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[DEBUG][2014-07-23 18:12:17,760][org.quartz.core.QuartzSchedulerThread]batch acquisition of 1 triggers
+[INFO][2014-07-23 18:12:18,001][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+[INFO][2014-07-23 18:12:18,002][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+[DEBUG][2014-07-23 18:12:18,003][org.quartz.simpl.SimpleThreadPool]Shutting down threadpool...
+[DEBUG][2014-07-23 18:12:18,004][org.quartz.simpl.SimpleThreadPool]Shutdown of threadpool complete.
+[INFO][2014-07-23 18:12:18,004][org.quartz.core.QuartzScheduler]Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.

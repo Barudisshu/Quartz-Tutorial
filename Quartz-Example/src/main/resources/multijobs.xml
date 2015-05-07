@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
+                     version="1.8">
+
+    <schedule>
+        <job>
+            <name>ScanTomcat</name>
+            <group>jobDetail-group</group>
+
+            <job-class>net.individuals.quartz.ScanDirectoryJob</job-class>
+            <job-data-map>
+                <entry>
+                    <key>SCAN_DIR</key>
+                    <value>D:\Program Files\IntelliJ IDEA 12.1.5\runtime\apache-tomcat-7.0.39\conf</value>
+                </entry>
+            </job-data-map>
+        </job>
+
+        <trigger>
+            <simple>
+                <name>tomcatTrigger</name>
+                <group>trigger-group</group>
+
+                <!--jobName和jobGroup必须与对应的Job匹配-->
+                <job-name>ScanTomcat</job-name>
+                <job-group>jobDetail-group</job-group>
+
+                <start-time>2008-09-03T14:43:00</start-time>
+                <!-- repeat indefinitely every 10 seconds -->
+                <repeat-count>-1</repeat-count>
+                <repeat-interval>10000</repeat-interval>
+            </simple>
+        </trigger>
+    </schedule>
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    |                   传说中的分割线                       |
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <schedule>
+        <job>
+            <name>ScanGlassfish</name>
+            <group>jobDetail-group</group>
+
+            <job-class>net.individuals.quartz.ScanDirectoryJob</job-class>
+            <job-data-map>
+                <entry>
+                    <key>SCAN_DIR</key>
+                    <value>D:\Program Files\IntelliJ IDEA 12.1.5\runtime\glassfish4\glassfish\domains\domain1\config</value>
+                </entry>
+            </job-data-map>
+        </job>
+
+        <trigger>
+            <simple>
+                <name>glassfishTrigger</name>
+                <group>trigger-group</group>
+
+                <!--jobName和jobGroup必须与对应的Job匹配-->
+                <job-name>ScanGlassfish</job-name>
+                <job-group>jobDetail-group</job-group>
+
+                <start-time>2008-09-03T14:43:00</start-time>
+                <!-- repeat indefinitely every 10 seconds -->
+                <repeat-count>-1</repeat-count>
+                <repeat-interval>10000</repeat-interval>
+            </simple>
+        </trigger>
+    </schedule>
+
+</job-scheduling-data>
